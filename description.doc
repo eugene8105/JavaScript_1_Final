@@ -1,0 +1,45 @@
+A site for a mortgage broker, including loan approval form and amortization calculator
+
+Requirements
+Design and structure
+
+Use external CSS and JS files
+Make sure you have styled text, colors, etc.
+Be creative!
+GUI
+
+Is it easy to use?
+Does it collect user input efficiently?
+If a form is used, did you pick the most appropriate input types
+Validation
+
+ALL user input should be validated.
+jQuery
+
+jQuery must be used for manipulating the document and elements within it
+Do not use plain JavaScript, such as document.getElementById or onclick
+Structured programming techniques
+
+The logic works and is efficient
+Decisions and loops are used
+Complex data types
+
+Arrays and/or objects are used
+Functions
+
+You must have at least two functions that accept parameters and/or return a value
+Event handler functions will not satisfy this requirement (in other words, functions that are called when when the user clicks a button or submits a form)
+Did you do what you proposed?
+
+Your code should match what was outlined in your proposal
+If you need to make changes, confirm them with your instructor before you turn it in
+Documentation
+
+Make sure all of your JavaScript code is well documented with comments
+Extra credit
+
+Present ideas for extra credit within your proposal. Some ideas include:
+
+Include modal windows (+5 points)
+Include a jQuery slideshow (+5 points)
+Use cookies or the query string to pass information from one page to another (+5 points)

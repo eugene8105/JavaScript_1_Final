@@ -1,0 +1,32 @@
+How to calculate a loan amortization schedule if you know your monthly payment:
+
+Starting in month one, take the total amount of the loan and multiply it by the interest rate on the loan. 
+Then for a loan with monthly repayments, divide the result by 12 to get your monthly interest. 
+Subtract the interest from the total monthly payment, and the remaining amount is what goes toward principal. 
+For month two, do the same thing, except start with the remaining principal balance from month one rather than the original amount of the loan. 
+By the end of the set loan term, your principal should be at zero.
+
+Take a simple example: Say you have a 30-year mortgage for $240,000 at a 5% interest rate that carries a monthly payment of $1,288. 
+In month one, you'd take $240,000 and multiply it by 5% to get $12,000. Divide that by 12, and you'd have $1,000 in interest for your first monthly payment. 
+The remaining $288 goes toward paying down principal.
+
+For month two, your outstanding principal balance is $240,000 minus $288, or $239,712. 
+Multiply that by 5% and divide by 12, and you get a slightly smaller amount -- $998.80 -- going toward interest. 
+Gradually over the ensuing months, less money will go toward interest, and your principal balance will get whittled down faster and faster. 
+By month 360, you owe just $5 in interest, and the remaining $1,283 pays off the balance in full.
+
+
+Calculating an amortization schedule if you don't know your payment:
+
+Sometimes, when you're looking at taking out a loan, all you know is how much you want to borrow and what the rate will be. 
+In that case, the first step will be to figure out what the monthly payment will be. 
+Then you can follow the steps above to calculate the amortization schedule.
+
+There are a couple ways to go about it. 
+The simplest is to use a calculator that gives you the ability to input your loan amount, interest rate, and repayment term. 
+For instance, our mortgage calculator will give you a monthly payment on a home loan. You can also use it to figure out payments for other types of loans simply by changing the terms and removing any estimates for home expenses.
+
+If you're a do-it-yourselfer, you can also use an Excel spreadsheet to come up with the payment. 
+The PMT function gives you the payment based on the interest rate, number of payments, and principal balance for the loan. 
+For instance, to calculate the monthly payment in the example above, you could set an Excel cell to =PMT(5%/12,360,240000). 
+It would give you the $1,288 figure you saw in that example.

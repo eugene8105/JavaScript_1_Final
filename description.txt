@@ -1,0 +1,16 @@
+Requirements
+Create an array that contains at least a dozen words. When the game begins, generate a random valid index to pick one of the words.
+
+Display one dash for each unguessed letter.
+
+For example, if the hidden word is "computer", first display --------.
+
+As the user enters each guess, display the word again, replacing dashes with the guessed letter if it occurs in that position. 
+
+After the user guesses "p", the display becomes ---p----.
+
+Make sure that when a user makes a correct guess, all the matching letters are filled in. For example, if the word is "banana" and the user guesses "a", all three "a" characters are filled in.
+
+Allow the user to guess letters continuously (up to 6 guesses) until all of the letters in the word are correctly guessed. If the user has used all of their guesses without completing the word, they have lost and the game is over.
+
+See the rubric below for grading criteria.
