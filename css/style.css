@@ -1,3 +1,32 @@
+
+/* start from tabs*/
+body {
+    padding: 25px;
+    background-color: blanchedalmond;
+  }
+  
+  .tab-pane {
+    padding: 10px;
+  }
+  #home {
+    background-color: red;
+  }
+  
+  #tab1 {
+    background-color: green;
+  }
+  
+  #tab2 {
+    background-color: blue;
+    color: aliceblue;
+  }
+  #practiceTab {
+    background-color: yellowgreen;
+    color: darkslateblue;
+  }
+
+  /* end from tabs*/
+
 body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;

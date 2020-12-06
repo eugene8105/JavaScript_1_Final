@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><title>Mortgage</title>
+<head>
+    <title>Mortgage</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <h1>Mortgage</h1>
-    <h3>Info 1<br>Info 2</h3>
 
-    <!-- <div class="flex-container flex-column">
-        <div class="flex-container flex-wrap" id="board">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
+    <!--Start tabs-->
 
-        
-        <button id="reset-button">reset</button>
-    </div> -->
+    <div class="container">
+        <nav>
+            <ul id="tabs" class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tab1">Tab 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tab2">Tab 2</a>
+                </li>
+            </ul>
+        </nav>
 
-    <div class="container justify-content-center">
-        <h1 id="win"></h1>
+        <div class="tab-content">
+            <div id="home" class="tab-pane active">
+                <h2>Home</h2>
+                <p>Some info</p>
+                <p>
+                    <img src="img/Ham-Sandwich.jpg" alt="Ham sandwich" id="sandwich">
+                    <br>
+                    <button id="animateButton">Animate!</button>
+                </p>
+            </div>
 
-        <div class="row">
-            <div class="col" id="board">
-                
+            <div id="tab1" class="tab-pane">
+                <h2>Tab 1</h2>
+                <p>some info</p>
+            </div>
+
+            <div id="tab2" class="tab-pane">
+                <h2>Tab 2</h2>
+                <p>Some info</p>
+                <img src="img/die.png" alt="Six sided die" height="225" width="225" />
             </div>
         </div>
-    
     </div>
 
+    <!--end tabs-->
+
+
+    <div>
+        <p>
+            Verterem forensibus et mea, dico saperet intellegebat cu mel.
+            Tractatos forensibus efficiendi ius in, eu alienum laboramus eos.
+            Veri brute ut duo. Usu idque ornatus in, sea eu regione imperdiet.
+            Integre aliquid adipiscing vix id, mel ea aeterno feugait maiestatis.
+            Dicant placerat intellegat vix cu, velit causae pri ut.
+        </p>
+        <p>
+            Id elit brute est, recusabo oportere percipitur an vix.
+            Ne feugait splendide vel. Adipisci iudicabit vix cu.
+            In cibo aliquam verterem usu, liber periculis duo in.
+            Cum posse prompta ad. Ea cum nisl enim definitionem, mazim error senserit ad his.
+        </p>
+        <p>
+            Ad vero imperdiet vix, at argumentum intellegebat eum.
+            Vel no scripta oblique, te vidit error nobis vim, ut elitr mnesarchum accommodare mel.
+            Mea malorum gubergren moderatius ea, mutat appareat an quo.
+            Mollis veritus tincidunt quo ad, illud dicam nonumy an ius.
+        </p>
+        <p>
+            Qui ei consetetur consequuntur, mel iusto mucius consequat ex.
+            Consul impedit et nec. Maiestatis argumentum cu vis, nec mutat oporteat abhorreant an.
+            Mea ex alienum percipit definiebas, vim ne elitr congue detracto.
+            No duo errem dignissim. Referrentur consectetuer pri ea, ea has viris docendi.
+            Aliquando dissentiet pri ex, purto sapientem constituto has in, vis scripta detracto principes ad.
+        </p>
+        <p>
+            Albucius mandamus rationibus an nam, sea intellegat appellantur ei.
+            Case autem sea ea. Mei ad enim invenire, dicunt gubergren ne his.
+            Dicta delicatissimi pri ne. Eu impedit menandri has.
+        </p>
+        <p>
+            Quem phaedrum liberavisse cu duo, inani graeci possim no vim, et vix vero tota omnesque.
+            Mea cu deleniti torquatos, nonumy oblique facilisi eum no.
+            Vix delenit epicuri no, ad mea oratio partem dissentiunt.
+            Quaeque veritus ea vim. Et nec legimus minimum scriptorem, ei eos liber mollis.
+        </p>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- My script -->
     <script src="js/script.js"></script>
 </body>
