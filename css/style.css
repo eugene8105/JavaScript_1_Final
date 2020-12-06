@@ -1,74 +1,77 @@
-
 /* start from tabs*/
-body {
-    padding: 25px;
-    background-color: blanchedalmond;
-  }
-  
-  .tab-pane {
-    padding: 10px;
-  }
-  #home {
-    background-color: red;
-  }
-  
-  #tab1 {
-    background-color: green;
-  }
-  
-  #tab2 {
-    background-color: blue;
-    color: aliceblue;
-  }
-  #practiceTab {
-    background-color: yellowgreen;
-    color: darkslateblue;
-  }
 
-  /* end from tabs*/
+h5{
+  color: black;
+  font-weight: bold;
+  font-size: 150%;
+}
 
 body {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    
+  padding: 25px;
+  background-color: rgba(160, 240, 135, 0.308);
+}
+
+.tab-pane {
+  padding: 10px;
+}
+#home {
+  background-color: rgb(185, 250, 141);
+}
+
+#tab1 {
+  background-color: green;
+}
+
+#tab2 {
+  background-color: rgba(0, 255, 76, 0.637);
+  color: aliceblue;
+}
+#practiceTab {
+  background-color: yellowgreen;
+  color: darkslateblue;
+}
+
+/* end from tabs*/
+
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-column {
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    /* tells the container to drop down once it reaches max-width */
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  /* tells the container to drop down once it reaches max-width */
 }
 
 .flex-wrap {
-    flex-wrap: wrap;
-    height: 432px;
-    width: 432px;
+  flex-wrap: wrap;
+  height: 432px;
+  width: 432px;
 }
-    
-    
+
 .square {
-    border: 2px solid rgba(0, 0, 0, .75);
-    height: 140px;
-    width: 140px;
-    font-size: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  height: 140px;
+  width: 140px;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-    
-    
+
 #reset-button {
-    text-align: center;
-    font-size: 20px;
-    border: 1px solid black;
-    height: 55px;
-    width: 100px;
-    margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid black;
+  height: 55px;
+  width: 100px;
+  margin: 10px;
 }
