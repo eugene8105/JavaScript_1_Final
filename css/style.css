@@ -9,6 +9,14 @@ h2{
   align-items: center;
 } */
 
+.content{
+  text-align: left;
+}
+
+nav .nav-tabs li a{
+  color: rgb(5, 5, 5) !important;
+  font-weight: bold;
+}
 .tab-pane {
   padding: 10px;
 }
@@ -32,7 +40,7 @@ h2{
 /* end from tabs*/
 
 body {
-  background-image: url("../img/happy_family.jpg");
+  /* background-image: url("../img/happy_family.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;

@@ -59,14 +59,14 @@
         <nav>
             <ul id="tabs" class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#home">Home</a>
+                    <a class="nav-link active" href="#home">Main</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#tab1">Tab 1</a>
+                    <a class="nav-link" href="#tab1">Check if you qualified</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#tab2">Tab 2</a>
-                </li>
+                </li> -->
             </ul>
         </nav>
 
@@ -82,15 +82,48 @@
             </div>
 
             <div id="tab1" class="tab-pane">
+                <!--Start of the form-->
                 <h2>Tab 1</h2>
-                <p>some info</p>
+
+
+               <form>
+                    <div class="row">
+                        <div class="content">
+                            <h2>Check if you qualified for loan</h2>
+                            <div>
+                                <label for="salary">What is your salary<br></label>
+                                <input type="number" name="salary" id="salary" value="">
+                            </div>
+                            <div>
+                                <label for="credit">
+                                    What is your credit scores<br>
+                                </label>
+                                <input type="number" name="credit" id="credit" value="">
+                            </div>
+                            <div>
+                                <label for="months">
+                                    How many months at current job<br>
+                                </label>
+                                <input type="number" name="months" id="months" value="">
+                            </div>
+                            <p>
+                                <input type="submit" name="submitButton" id="submitButton" value="Submit">
+
+                            </p>
+                            <p id="message"></p>
+                        </div>
+
+                    </div>
+
+                </form>
+                <!--end of the form-->
             </div>
 
-            <div id="tab2" class="tab-pane">
+            <!-- <div id="tab2" class="tab-pane">
                 <h2>Tab 2</h2>
                 <p>Some info</p>
                 <img src="img/die.png" alt="Six sided die" height="225" width="225" />
-            </div>
+            </div> -->
         </div>
     </div>
 
