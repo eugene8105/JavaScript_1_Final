@@ -3,6 +3,7 @@ $(document).ready(function () {
 
     // event handlers
     $("#tabs a").click(showTab);
+    $("#calculateButton").click(calculateMonthlyPayment);
 
 
     // other functions
@@ -11,7 +12,67 @@ $(document).ready(function () {
         $(this).tab("show");
     }
 
+    var orgMonthlyPayment = 0;
+    var monthsMortgage = 0;
+    // var month = 0;
+    // var newMonthlyPayment = 0;
+    var convertInterestRate = 0;
+    var loanAmount = 0;
 
+    var amorPaymentsSchedule = [];
+    var amorPayMonth = {};
+
+    function amortizationSchedule() {
+
+        for (var i = 1; i < monthsMortgage; i++) {
+
+            var interestPaid = (loanAmount * convertInterestRate) / 12
+            var principalPaid = orgMonthlyPayment - interestPaid;
+            loanAmount = loanAmount - principalPaid;
+
+            amorPayMonth = {
+                month: i,
+                interest: interestPaid,
+                principal: principalPaid
+            }
+            amorPaymentsSchedule.push(amorPayMonth);
+        }
+
+        console.log(amorPaymentsSchedule);
+    }
+
+    function calculateMonthlyPayment() {
+        // get loanAmount
+        loanAmount = parseFloat($("#loanAmount").val());
+        // get interest rate
+        var interestRate = parseFloat($("#interestRate").val())
+
+        convertInterestRate = interestRate / 100;
+        // get morgage term in years - convert into monthes
+        var yearsMorgage = parseInt($("#yearsMorgage").val());
+        // convert years to a monthes
+        monthsMortgage = yearsMorgage * 12;
+
+        // calculat monthly payment
+
+        // calculate monthly interest rate
+        var monthlyInterest = convertInterestRate / 12;
+
+        // separating a part of fraction calculation for easy modifications and troubleshooting
+        var numerator = monthlyInterest * (Math.pow(1 + monthlyInterest, monthsMortgage));
+        var denominator = Math.pow(1 + monthlyInterest, monthsMortgage) - 1;
+
+        orgMonthlyPayment = loanAmount * numerator / denominator;
+
+
+        // testing output
+        // with 100000 loanAmount, 6.5 interestRate and 30 years
+        // monthly payment will be 632
+        console.log(orgMonthlyPayment);
+
+        amortizationSchedule();
+
+    }
     // start form
     var myRules = {
 
@@ -106,7 +167,7 @@ $(document).ready(function () {
 
 
         // output on the screen
-        $("#message").text(`You ${decision} get a loan from Diamond Lending Bank.`);
+        $("#message").text(`You ${decision} get a loan with our Lending Bank.`);
 
         // $("p.output").show();
 
