@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
 
+    displayAmortizSchedule();
+
     // event handlers
     $("#tabs a").click(showTab);
     $("#calculateButton").click(calculateMonthlyPayment);
@@ -21,6 +23,19 @@ $(document).ready(function () {
 
     var amorPaymentsSchedule = [];
     var amorPayMonth = {};
+
+    // display amortization schedule from an array
+    function displayAmortizSchedule(){
+        for(var i = 0; i < 5; i++){
+            $("#columnOne").append(`testing column one <br>`);
+
+            $("#columnTwo").append(`testing column two <br>`);
+
+            $("#columnThree").append(`testing column three<br>`);
+        }
+        
+
+    }
 
     function amortizationSchedule() {
 
@@ -182,3 +197,11 @@ $(document).ready(function () {
 
 
 });
+
+
+// Chart script starts
+
+
+
+
+// Chart script ends

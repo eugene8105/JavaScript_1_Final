@@ -35,10 +35,11 @@
       </ul>
     </div>
   </nav>
-  <h1>Calculate your mortgage amortization</h1>
+  <br>
+  <h1>Check your mortgage amortization</h1>
 
   <div class="content">
-
+    <br>
     <div>
       <label for="salary">Loan amount<br></label>
       <input type="number" name="loanAmount" id="loanAmount" value="">
@@ -56,11 +57,27 @@
       </label>
       <input type="number" name="yearsMorgage" id="yearsMorgage" value="">
     </div>
+    <br>
     <p>
       <input type="submit" name="submitButton" id="calculateButton" value="Calculate">
     </p>
+    <a class="nav-link" href="chart.html">Chart of schedule mortgage amortization<span class="sr-only">(current)</span></a>
     <p id="message"></p>
   </div>
+
+  <div class="container">
+    <div class="column column-two column-inset-1"><p id="colTitle">Column one</p>
+      <p id="columnOne"></p>
+    </div>
+    
+    <div class="column column-one column-offset-2"><p id="colTitle">Column two</p>
+      <p id="columnTwo"></p>
+    </div>
+
+    <div class="column column-three column-offset-1"><p id="colTitle">Column three</p>
+      <p id="columnThree"></p>
+    </div>
+ </div>
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
