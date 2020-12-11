@@ -7,6 +7,8 @@ $(document).ready(function () {
     $("#tabs a").click(showTab);
     $("#calculateButton").click(calculateMonthlyPayment);
 
+    $("#displayChart").click(testChart);
+
 
     // other functions
     function showTab(event) {
@@ -23,6 +25,31 @@ $(document).ready(function () {
 
     var amorPaymentsSchedule = [];
     var amorPayMonth = {};
+
+    // start
+    function testChart(){
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title:{
+                text: "Chart in CanvasJS"              
+            },
+            data: [              
+            {
+                type: "column",
+                dataPoints: [
+                    { label: "test 1",  y: 10  },
+                    { label: "test 1", y: 15  },
+                    { label: "test 1", y: 25  },
+                    { label: "test 1",  y: 30  },
+                    { label: "test 1",  y: 28  }
+                ]
+            }
+            ]
+        });
+        chart.render();
+    }
+    
+
+    //end
 
     // display amortization schedule from an array
     function displayAmortizSchedule(){
