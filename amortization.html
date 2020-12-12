@@ -24,7 +24,7 @@
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Calculat amortization <span class="sr-only">(current)</a>
+          <a class="nav-link" href="#">Morgage amortization <span class="sr-only">(current)</a>
         </li>
         <!-- <li class="nav-item">
               <a class="nav-link" href="#">Pricing</a>
@@ -35,11 +35,9 @@
       </ul>
     </div>
   </nav>
-  <br>
   <h1>Check your mortgage amortization</h1>
 
   <div class="content">
-    <br>
     <div>
       <label for="salary">Loan amount<br></label>
       <input type="number" name="loanAmount" id="loanAmount" value="">
@@ -61,25 +59,32 @@
     <p>
       <input type="submit" name="submitButton" id="calculateButton" value="Calculate">
     </p>
-    <a class="nav-link" href="chart.html">Chart of schedule mortgage amortization<span class="sr-only">(current)</span></a>
-    <p id="message"></p>
+    <p id="monthlyPayment"></p>
+    <p id="chart"></p>
+
+    <!-- <a type="submit" class="amortLink" id="amortLink">Chart of mortgage amortization</a> -->
   </div>
 
+  <div id="chartContainer" style="height: 370px; width: 90%;"></div>
+
   <div class="container">
-    <div class="column column-two column-inset-1"><p id="colTitle">Column one</p>
+    <div class="column column-two column-inset-1">
+      <p id="colTitle">Month of payment</p>
       <p id="columnOne"></p>
     </div>
-    
-    <div class="column column-one column-offset-2"><p id="colTitle">Column two</p>
+
+    <div class="column column-one column-offset-2">
+      <p id="colTitle">Interest</p>
       <p id="columnTwo"></p>
     </div>
 
-    <div class="column column-three column-offset-1"><p id="colTitle">Column three</p>
+    <div class="column column-three column-offset-1">
+      <p id="colTitle">Principl</p>
       <p id="columnThree"></p>
     </div>
- </div>
+  </div>
 
-
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

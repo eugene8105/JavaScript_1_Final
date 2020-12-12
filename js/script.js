@@ -1,14 +1,11 @@
 
 $(document).ready(function () {
 
-    displayAmortizSchedule();
-
     // event handlers
     $("#tabs a").click(showTab);
     $("#calculateButton").click(calculateMonthlyPayment);
 
-    $("#displayChart").click(testChart);
-
+    // $("#displayChart").click(testChart);
 
     // other functions
     function showTab(event) {
@@ -27,40 +24,24 @@ $(document).ready(function () {
     var amorPayMonth = {};
 
     // start
-    function testChart(){
-        var chart = new CanvasJS.Chart("chartContainer", {
-            title:{
-                text: "Chart in CanvasJS"              
-            },
-            data: [              
-            {
-                type: "column",
-                dataPoints: [
-                    { label: "test 1",  y: 10  },
-                    { label: "test 1", y: 15  },
-                    { label: "test 1", y: 25  },
-                    { label: "test 1",  y: 30  },
-                    { label: "test 1",  y: 28  }
-                ]
-            }
-            ]
-        });
-        chart.render();
-    }
-    
+
 
     //end
 
     // display amortization schedule from an array
-    function displayAmortizSchedule(){
-        for(var i = 0; i < 5; i++){
-            $("#columnOne").append(`testing column one <br>`);
+    function displayAmortizSchedule() {
 
-            $("#columnTwo").append(`testing column two <br>`);
+        amorPaymentsSchedule.forEach(function (amorMonth) {
 
-            $("#columnThree").append(`testing column three<br>`);
-        }
-        
+            $("#columnOne").append(`${amorMonth.month} <br>`);
+
+            $("#columnTwo").append(`$${amorMonth.interest.toFixed(2)} <br>`);
+
+            $("#columnThree").append(`$${amorMonth.principal.toFixed(2)} <br>`);
+            console.log(amorMonth.month, amorMonth.interest, amorMonth.principal);
+        })
+
+        runChart();
 
     }
 
@@ -81,9 +62,50 @@ $(document).ready(function () {
         }
 
         console.log(amorPaymentsSchedule);
+
+        displayAmortizSchedule();
     }
 
+    // start
+
+    function runChart() {
+
+        var dataPoints = [];
+
+        for (var i = 0; i < amorPaymentsSchedule.length; i++) {
+            dataPoints.push({ "label": amorPaymentsSchedule[i].month, y: amorPaymentsSchedule[i].principal })
+        }
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            theme: "light1", // "light2", "dark1", "dark2"
+            animationEnabled: false, // change to true		
+            title: {
+                text: "Morgage Amortization"
+            },
+
+            data: [
+                {
+                    type: "column",
+                    dataPoints: dataPoints
+                }
+            ]
+        });
+        chart.render();
+
+        explanation();
+
+    }
+
+    function explanation() {
+        $("#monthlyPayment").text(`Your monthly payment is ${orgMonthlyPayment.toFixed(2)}`)
+        $("#chart").text(`Chart is showing a principal payments increasing with months passing by.`)
+    }
+
+    // edn
+
     function calculateMonthlyPayment() {
+
+
         // get loanAmount
         loanAmount = parseFloat($("#loanAmount").val());
         // get interest rate
@@ -111,6 +133,8 @@ $(document).ready(function () {
         // with 100000 loanAmount, 6.5 interestRate and 30 years
         // monthly payment will be 632
         console.log(orgMonthlyPayment);
+
+        $("p.amortLink").show();
 
         amortizationSchedule();
 
@@ -222,13 +246,6 @@ $(document).ready(function () {
     });
     // end of the form
 
-
 });
 
 
-// Chart script starts
-
-
-
-
-// Chart script ends
