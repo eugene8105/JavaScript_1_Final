@@ -45,10 +45,6 @@ nav .nav-tabs li a {
 #tab2 {
   color: aliceblue;
 }
-#practiceTab {
-  background-color: yellowgreen;
-  color: darkslateblue;
-}
 
 /* end from tabs*/
 
@@ -81,7 +77,7 @@ body {
   width: 432px;
 }
 
-.container {
+.containerCol {
   display: flex;
 }
 
