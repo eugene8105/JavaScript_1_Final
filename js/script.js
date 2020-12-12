@@ -97,8 +97,9 @@ $(document).ready(function () {
     }
 
     function explanation() {
-        $("#monthlyPayment").text(`Your monthly payment is ${orgMonthlyPayment.toFixed(2)}`)
-        $("#chart").text(`Chart is showing a principal payments increasing with months passing by.`)
+        $("#monthlyPayment").text(`Your monthly payment is $${orgMonthlyPayment.toFixed(2)}.`)
+        $("#chart").html(`As you can see in the beginning, a big part of your payment will go toward the interest, not the principal.<br>
+        Chart is showing how principal payments increase with ongoing months.`)
     }
 
     // edn
